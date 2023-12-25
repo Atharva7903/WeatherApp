@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 class="title">Weather App</h1>
+        <!-- Tab Container ----------------------------------->
+        <div class="tab-container">
+            <div class="tab" data-yourWeather>Your Weather</div>
+            <div class="tab" data-searchWeather>Search Weather</div>
+        </div>
+
+        <!---------- Main-Container--------------------------->
+        <div class="main-container">
+            <!-- Grant Access Container------------------->
+            <div class="accessContainer flexContainer" data-acessContainer>
+                <img src="assets/location.png" alt="Location Image" height="80px">
+                <p>Grant Location Access</p>
+                <p>Allow Access To Get Weather Information</p>
+                <button class="accessBtn" data-accessBtn>Grant Acccess</button>
+            </div>
+
+            <!--------- Search Form ---------------------- -->
+            <form class="searchForm" data-searchForm>
+                <input type="text" placeholder="Search For City.." class="searchInput" data-searchInput>
+                <button class="seachBtn" type="submit" data-searchBtn>
+                    <img src="assets/search.png" alt="Search" height="20">
+                </button>
+            </form>
+
+            <!-- -------Loding Spiner-------------------- -->
+            <div class="lodingContainer flexContainer" data-lodingScreen>
+                <img src="assets/loading.gif" width="150" height="150">
+                <p> Loading...</p>
+            </div>
+            <!-- -------Weather Info Container----------- -->
+
+            <div class="weather-info-container flexContainer" data-userInfoContianer>
+                <!-- Weather Info -->
+                <div class="name-flag">
+                    <p data-cityName>Agra</p>
+                    <img data-countryIcon>
+                </div>
+                <p class="weather-description" data-weatherDesc>Clear Sky</p>
+                <img data-weatherIcon class="weather-img">
+                <!-- Temprature -->
+                <p class="weather-temprature" data-temp></p>
+                <!-- Parameter -->
+                <div class="parameter-container">
+                    <!--card 1-->
+                    <div class="parameter">
+                        <img src="./assets/wind.png">
+                        <p>windspeed</p>
+                        <p data-windspeed></p>
+                    </div>
+
+                    <!--card 2-->
+                    <div class="parameter">
+                        <img src="./assets/humidity.png">
+                        <p>humidity</p>
+                        <p data-humidity></p>
+                    </div>
+
+                    <!--card 3-->
+                    <div class="parameter">
+                        <img src="./assets/cloud.png">
+                        <p>Clouds</p>
+                        <p data-cloudiness></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ----------Error Screen------------------ -->
+            <div class="errorContainer flexContainer" data-errorContainer>
+                <img src="assets/not-found.png" alt="">
+                <p>Invalid Location</p>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
